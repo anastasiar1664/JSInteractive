@@ -37,7 +37,7 @@ export class Calculator {
       this.expression += value;
     }
     this.updateDisplay();
-  } 
+  }
   calculate() {
     if (!this.expression || this.hasError) return;
     try {
@@ -64,7 +64,7 @@ export class Calculator {
     if (doubleOps.test(expr)) return false;
     if (/[+\-*/]$/.test(expr)) return false;
     return true;
-  } 
+  }
   clear() {
     this.expression = "";
     this.hasError = false;
@@ -89,8 +89,7 @@ export class Calculator {
   }
   hasDuplicateDot() {
     const parts = this.expression.split(/[\+\-\*\/]/);
-    const lastNumber = parts[parts.length -1];
+    const lastNumber = parts[parts.length - 1];
     return lastNumber && lastNumber.includes(".");
   }
 }
-
